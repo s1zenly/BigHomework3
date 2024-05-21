@@ -1,0 +1,61 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g3",
+				// "${file}",
+				"./server.c",
+				"./server-tools.c",
+				"../util/parser.c",
+				"-fsanitize=\"address,undefined\"",
+				"-o",
+				"/home/bwst/Projects/arch-comp-systems/os_ihw3/mark-4-5/server",
+				// "${fileDirname}/${fileBasenameNoExtension}",
+				"-std=c11",
+				"-D__VSCODE_LOCALGHOST__=1",
+				"-D_FORTIFY_SOURCE=3",
+				"-fstack-protector-all",
+				"-mshstk",
+				"-Wall",
+				"-Wextra",
+				"-Wlogical-op",
+				"-Wcast-qual",
+				"-Wpedantic",
+				"-Wshift-overflow=2",
+				"-Wduplicated-cond",
+				"-Wunused",
+				"-Wconversion",
+				"-Wunsafe-loop-optimizations",
+				"-Wshadow",
+				"-Wnull-dereference",
+				"-Wundef",
+				"-Wwrite-strings",
+				"-Wsign-conversion",
+				"-Warith-conversion",
+				"-Wmissing-noreturn",
+				"-Wunreachable-code",
+				"-Wcast-align",
+				"-Warray-bounds=2",
+				"-pedantic-errors",
+				"-lrt",
+				"-lpthread",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true,
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}
